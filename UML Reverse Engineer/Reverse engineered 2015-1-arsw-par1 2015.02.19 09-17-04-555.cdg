@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reverse engineered 2015-1-arsw-par1 2015.02.19 09-17-04-555">
+  <ClassDiagramComponents>
+    <Class xPosition="30.0" yPosition="133.0" package="edu.eci.arsw.primefinder" name="PrimeFinderThread" visibility="public">
+      <Constructors>
+        <Constructor name="PrimeFinderThread" visibility="public">
+          <Argument type="BigInteger" name="a"/>
+          <Argument type="BigInteger" name="b"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="a" visibility="private" type="BigInteger"/>
+        <Field name="primes" visibility="private" type="List&lt;BigInteger&gt;"/>
+        <Field name="mt" visibility="private" type="MathUtilities"/>
+        <Field name="itCount" visibility="private" type="int"/>
+      </Fields>
+      <Methods>
+        <Method name="run" visibility="public" returnType="void"/>
+        <Method name="getPrimes" visibility="public" returnType="List&lt;BigInteger&gt;"/>
+      </Methods>
+    </Class>
+    <Class xPosition="428.0" yPosition="37.0" package="edu.eci.arsw.primefinder" name="PrimesFinderTool" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="20.0" package="edu.eci.arsw.utils" name="MathTools" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="checkIsPrime" visibility="public" returnType="boolean">
+          <Argument type="BigInteger" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="20.0" package="edu.eci.arsw.utils" name="MouseMovementMonitor" visibility="public">
+      <Constructors>
+        <Constructor name="MouseMovementMonitor" visibility="private"/>
+      </Constructors>
+      <Fields>
+        <Field name="instance" visibility="private" type="MouseMovementMonitor" isStatic="true"/>
+        <Field name="lastMovementTime" visibility="package" type="long"/>
+        <Field name="robot" visibility="package" type="Robot"/>
+        <Field name="d" visibility="package" type="Dimension"/>
+      </Fields>
+      <Methods>
+        <Method name="getInstance" visibility="public" returnType="MouseMovementMonitor" isStatic="true"/>
+        <Method name="getTimeSinceLastMouseMovement" visibility="public" returnType="long"/>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="382.0" package="edu.eci.arsw.utils" name="MouseMovementMonitorExample" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="a"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="412.0" yPosition="218.0" package="edu.eci.arsw.utils2" name="MathUtilities" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="isPrime" visibility="public" returnType="boolean">
+          <Argument type="BigInteger" name="n"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="MouseMovementMonitor" target="MouseMovementMonitor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="PrimesFinderTool" target="PrimeFinderThread" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mt" source="PrimeFinderThread" target="MathUtilities" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instance" source="MouseMovementMonitor" target="MouseMovementMonitor" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
