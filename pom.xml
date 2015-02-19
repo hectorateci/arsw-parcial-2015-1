@@ -20,7 +20,7 @@
             <version>4.1.4.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>orgeci.aspectj</groupId>
+            <groupId>org.aspectj</groupId>
             <artifactId>aspectjtools</artifactId>
             <version>1.7.4</version>
         </dependency>
